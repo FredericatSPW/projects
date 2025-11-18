@@ -1,0 +1,12 @@
+# Ignorer le dossier chromadb
+chroma_db/
+
+# Ignorer le dossier data
+data/
+
+# Ignorer tous les fichiers temporaires
+*.tmp
+
+# Ignorer tous les dossiers venv
+sme-RAG/
+streamlit-front/

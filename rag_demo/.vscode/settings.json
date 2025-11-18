@@ -1,0 +1,14 @@
+{
+    "python-envs.pythonProjects": [
+        {
+            "path": "",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:conda"
+        },
+        {
+            "path": "app_demo_rag.py",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:conda"
+        }
+    ]
+}
