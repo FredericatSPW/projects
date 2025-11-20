@@ -1,0 +1,25 @@
+import numpy as np
+import requests
+
+def embed(text: str, model="yxchia/multilingual-e5-base"):    # ou nomic-embed-text
+    r = requests.post("http://localhost:11434/api/embeddings",
+                      json={"model": model, "prompt": text})
+    r.raise_for_status()
+    return np.array(r.json()["embedding"], dtype=np.float32)
+
+def cos_sim(a, b):
+    a = a / (np.linalg.norm(a) + 1e-12)
+    b = b / (np.linalg.norm(b) + 1e-12)
+    return float(np.dot(a, b))
+
+# Example
+e_query = embed("procédure de commande publique")
+e_doc = embed("guide pratique des marchés publics en Région wallonne")
+print("cosine:", cos_sim(e_query, e_doc))
+
+e_query = embed("procédure de commande publique en Wallonie")
+e_doc = embed("guide pratique des marchés publics en Région wallonne")
+print("cosine:", cos_sim(e_query, e_doc))
+
+e_piz = embed("la pizza ananas c'est pas bon")
+print("cosine:", cos_sim(e_query, e_piz))

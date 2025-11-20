@@ -42,7 +42,10 @@ EMB_DEVICE = os.getenv("EMB_DEVICE", "cpu")  # "cpu" pas le choix sur thinkpad r
 # LLM Ollama (par défaut on vise Mistral)vv
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "granite4:7b-a1b-h")  # ex: "mistral" ou phi4-mini ou granite4:latest 
 # OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "granite4:latest")  # ex: "mistral" ou phi4-mini ou granite4:latest 
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
+# OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "phi3")  # ex: "mistral" ou phi4-mini ou granite4:latest 
+#OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://13.37.124.221:11434")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://10.0.26.30:11434")
+
 LLM_TEMPERATURE = float(os.getenv("LLM_TEMPERATURE", "0.2"))
 
 # Split
