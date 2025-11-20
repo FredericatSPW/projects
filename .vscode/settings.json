@@ -19,6 +19,11 @@
             "path": "anonymizer/service",
             "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:conda"
+        },
+        {
+            "path": "anonymizer/front",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:conda"
         }
     ]
 }
