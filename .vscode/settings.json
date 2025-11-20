@@ -14,6 +14,16 @@
             "path": "rag_demo/app_demo_rag.py",
             "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:conda"
+        },
+        {
+            "path": "anonymizer/service/main.py",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:conda"
+        },
+        {
+            "path": "anonymizer/service",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:conda"
         }
     ]
 }
